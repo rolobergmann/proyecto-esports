@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 export const Navbar = () => {
 	return (
@@ -31,7 +32,7 @@ export const Navbar = () => {
 					</button>
 				</form>
 				<div>
-					<Popup trigger={<button className="button"> Open Modal </button>} modal closeOnDocumentClick>
+					<Popup trigger={<button className="button"> Register </button>} modal closeOnDocumentClick>
 						<div>
 							<div className="modal-dialog" role="document">
 								<div className="modal-content">

@@ -7,7 +7,9 @@ import { NewsFeed } from "../component/news-feed";
 
 export const Home = () => (
 	<div className=" container text-center mt-5">
-		<Carrusel />
+		<div>
+			<Carrusel />
+		</div>
 		<Multimedia />
 		<NewsFeed />
 	</div>
