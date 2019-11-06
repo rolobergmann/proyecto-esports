@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => (
 	<footer className="page-footer font-small pt-4">
@@ -7,16 +8,16 @@ export const Footer = () => (
 				<div className="col-md-4 col-lg-4">
 					<ul className="list-unstyled">
 						<li>
-							<a href="#!">Tu Perfil</a>
+							<Link to="/">Tu Perfil</Link>
 						</li>
 						<li>
-							<a href="#!">Equipos</a>
+							<Link to="/">Equipos</Link>
 						</li>
 						<li>
-							<a href="#!">Noticias</a>
+							<Link to="/">Noticias</Link>
 						</li>
 						<li>
-							<a href="#!">Avisos Posiciones</a>
+							<Link to="/">Postulaciones</Link>
 						</li>
 					</ul>
 				</div>
@@ -24,9 +25,9 @@ export const Footer = () => (
 				<div className="col-md-4 col-lg-4">
 					<h5 className="text-uppercase">Visítanos en nuestras Redes Sociales</h5>
 					<br></br>
-					<a className="fb-ic">
+					<Link to="/">
 						<i className="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-					</a>
+					</Link>
 					<a className="tw-ic">
 						<i className="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
 					</a>
