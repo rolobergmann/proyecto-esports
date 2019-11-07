@@ -23,8 +23,8 @@ export const Layout = () => {
 			<BrowserRouter>
 				<ScrollToTop>
 					<Navbar />
-					<div className="row">
-						<div className="col-10 p-0 pl-2">
+					<div className=" container-fluid row">
+						<div className="col-9 p-0 pl-2">
 							<Switch>
 								<Route exact path="/" component={Home} />
 								<Route path="/demo" component={Demo} />
@@ -33,7 +33,7 @@ export const Layout = () => {
 								<Route render={() => <h1>Not found!</h1>} />
 							</Switch>
 						</div>
-						<div className="col-2 p-0 pr-2">
+						<div className="col-3 p-0 pr-2">
 							<Sidebar />
 						</div>
 					</div>
