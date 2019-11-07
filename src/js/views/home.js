@@ -6,7 +6,7 @@ import { Multimedia } from "../component/multimedia";
 import { NewsFeed } from "../component/news-feed";
 
 export const Home = () => (
-	<div className=" container text-center mt-5">
+	<div className=" container text-center mt-1">
 		<div>
 			<Carrusel />
 		</div>
