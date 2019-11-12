@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { MDBListGroup, MDBListGroupItem, MDBContainer } from "mdbreact";
 
+import Owlogo from "../../img/Overwatch.png";
+
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
@@ -14,6 +16,9 @@ export const Avisos = () => {
 			<MDBListGroup style={{ width: "100%" }}>
 				<MDBListGroupItem hover href="#">
 					<div className="d-flex w-100 justify-content-between">
+						<div>
+							<img className="d-block" src={Owlogo} />
+						</div>
 						<h5 className="mb-1">Gladiadores: Buscamos Tanque para Overwatch</h5>
 						<small>3 days ago</small>
 					</div>
