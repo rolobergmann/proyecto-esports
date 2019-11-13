@@ -26,14 +26,20 @@ export const Navbar = () => {
 					</Link>
 				</div>
 				<form className="form-inline my-2 my-lg-0">
-					<input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+					<input className="form-control mr-sm-2" type="search" placeHolder="Search" aria-label="Search" />
 					<button className="btn btn-outline-success my-2 my-sm-0" type="submit">
 						Search
 					</button>
 				</form>
 				<div>
 					<Popup trigger={<button className="button"> Register </button>} modal closeOnDocumentClick>
-						<div>
+						<div
+							className="modal-fade"
+							id="modalRegisterForm"
+							tabIndex="-1"
+							role="dialog"
+							aria-labelledby="myModalLabel"
+							aria-hidden="true">
 							<div className="modal-dialog" role="document">
 								<div className="modal-content">
 									<div className="modal-header text-center">
@@ -43,14 +49,14 @@ export const Navbar = () => {
 										</button>
 									</div>
 									<div className="modal-body mx-3">
-										<div className="md-form mb-5">
+										<div className="md-form mb-4">
 											<i className="fas fa-user prefix grey-text"></i>
 											<input type="text" id="orangeForm-name" className="form-control validate" />
 											<label data-error="wrong" data-success="right" htmlFor="orangeForm-name">
 												Your name
 											</label>
 										</div>
-										<div className="md-form mb-5">
+										<div className="md-form mb-4">
 											<i className="fas fa-envelope prefix grey-text"></i>
 											<input
 												type="email"
