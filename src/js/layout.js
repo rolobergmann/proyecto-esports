@@ -4,11 +4,13 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
+import { Avisos } from "./views/avisos";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { Sidebar } from "./component/side-bar";
 
 //create your first component
 export const Layout = () => {
@@ -21,12 +23,15 @@ export const Layout = () => {
 			<BrowserRouter>
 				<ScrollToTop>
 					<Navbar />
-					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route path="/demo" component={Demo} />
-						<Route path="/single/:theid" component={Single} />
-						<Route render={() => <h1>Not found!</h1>} />
-					</Switch>
+					<div className="container-fluid">
+						<Switch>
+							<Route exact path="/" component={Home} />
+							<Route path="/demo" component={Demo} />
+							<Route path="/avisos" component={Avisos} />
+							<Route path="/single/:theid" component={Single} />
+							<Route render={() => <h1>Not found!</h1>} />
+						</Switch>
+					</div>
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>

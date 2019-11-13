@@ -21,7 +21,7 @@ export const Navbar = () => {
 					<Link to="/demo">
 						<a className="nav-link">Area Clubes</a>
 					</Link>
-					<Link to="/demo">
+					<Link to="/avisos">
 						<a className="nav-link">Avisos</a>
 					</Link>
 				</div>
@@ -74,10 +74,13 @@ export const Navbar = () => {
 												type="password"
 												id="orangeForm-pass"
 												className="form-control validate"
+												placeholder="Your password"
 											/>
-											<label data-error="wrong" data-success="right" htmlFor="orangeForm-pass">
-												Your password
-											</label>
+
+											<label
+												data-error="wrong"
+												data-success="right"
+												htmlFor="orangeForm-pass"></label>
 										</div>
 									</div>
 									<div className="modal-footer d-flex justify-content-center">
