@@ -2,7 +2,7 @@ import React from "react";
 import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBIcon } from "mdbreact";
 
 export const HomeInfo = () => (
-	<MDBContainer className="mt-5 text-center">
+	<MDBContainer>
 		<MDBRow>
 			<MDBCol>
 				<MDBJumbotron style={{ padding: 0 }}>
