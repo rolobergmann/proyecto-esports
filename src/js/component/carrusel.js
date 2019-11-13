@@ -1,51 +1,66 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Carousel from "react-bootstrap/Carousel";
+import {
+	MDBCarousel,
+	MDBCarouselCaption,
+	MDBCarouselInner,
+	MDBCarouselItem,
+	MDBView,
+	MDBMask,
+	MDBContainer
+} from "mdbreact";
 
 export class Carrusel extends React.Component {
 	render() {
 		return (
-			<div>
-				<Carousel>
-					<Carousel.Item>
-						<img
-							className="d-block w-100"
-							src="https://cdn.wccftech.com/wp-content/uploads/2019/11/WCCFoverwatch22.jpg"
-							alt="First slide"
-						/>
-						<Carousel.Caption>
-							<Link to="/demo">
-								<h2>Avisos</h2>
-							</Link>
-							<h3>Revisa todos los avisos de equipos buscando jugadores!</h3>
-						</Carousel.Caption>
-					</Carousel.Item>
-					<Carousel.Item>
-						<img
-							className="d-block w-100"
-							src="https://images.tweaktown.com/news/6/8/68560_02_check-first-4k-screenshots-diablo-4_full.jpg"
-							alt="Second slide"
-						/>
-
-						<Carousel.Caption>
-							<h3>Equipos</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</Carousel.Caption>
-					</Carousel.Item>
-					<Carousel.Item>
-						<img
-							className="d-block w-100"
-							src="https://cdn.wccftech.com/wp-content/uploads/2019/11/WCCFoverwatch22.jpg"
-							alt="Third slide"
-						/>
-
-						<Carousel.Caption>
-							<h3>Noticias</h3>
-							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-						</Carousel.Caption>
-					</Carousel.Item>
-				</Carousel>
-			</div>
+			<MDBContainer>
+				<MDBCarousel activeItem={1} length={3} showControls={true} showIndicators={true} className="z-depth-1">
+					<MDBCarouselInner>
+						<MDBCarouselItem itemId="1">
+							<MDBView>
+								<img
+									className="d-block w-100"
+									src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+									alt="First slide"
+								/>
+								<MDBMask overlay="black-light" />
+							</MDBView>
+							<MDBCarouselCaption>
+								<h3 className="h3-responsive">Light mask</h3>
+								<p>First text</p>
+							</MDBCarouselCaption>
+						</MDBCarouselItem>
+						<MDBCarouselItem itemId="2">
+							<MDBView>
+								<img
+									className="d-block w-100"
+									src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+									alt="Second slide"
+								/>
+								<MDBMask overlay="black-strong" />
+							</MDBView>
+							<MDBCarouselCaption>
+								<h3 className="h3-responsive">Strong mask</h3>
+								<p>Second text</p>
+							</MDBCarouselCaption>
+						</MDBCarouselItem>
+						<MDBCarouselItem itemId="3">
+							<MDBView>
+								<img
+									className="d-block w-100"
+									src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+									alt="Third slide"
+								/>
+								<MDBMask overlay="black-slight" />
+							</MDBView>
+							<MDBCarouselCaption>
+								<h3 className="h3-responsive">Slight Mast</h3>
+								<p>Third text</p>
+							</MDBCarouselCaption>
+						</MDBCarouselItem>
+					</MDBCarouselInner>
+				</MDBCarousel>
+			</MDBContainer>
 		);
 	}
 }

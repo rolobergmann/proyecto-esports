@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 export const Footer = () => (
-	<footer className="page-footer font-small pt-4">
-		<div className="container-fluid text-center">
-			<div className="row">
-				<div className="col-md-4 col-lg-4">
+	<MDBFooter color="blue" className="font-small pt-4 mt-4">
+		<MDBContainer fluid className="text-center text-md-left">
+			<MDBRow>
+				<MDBCol md="4">
 					<ul className="list-unstyled">
 						<li>
 							<Link to="/">Tu Perfil</Link>
@@ -20,9 +21,9 @@ export const Footer = () => (
 							<Link to="/">Postulaciones</Link>
 						</li>
 					</ul>
-				</div>
+				</MDBCol>
 
-				<div className="col-md-4 col-lg-4">
+				<MDBCol md="4">
 					<h5 className="text-uppercase">Visítanos en nuestras Redes Sociales</h5>
 					<br></br>
 					<Link to="/">
@@ -34,8 +35,8 @@ export const Footer = () => (
 					<a className="ins-ic">
 						<i className="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
 					</a>
-				</div>
-				<div className="col-md-4 col-lg-4">
+				</MDBCol>
+				<MDBCol md="4">
 					<ul className="list-unstyled">
 						<li>
 							<a href="#!">Quienes Somos</a>
@@ -47,12 +48,13 @@ export const Footer = () => (
 							<a href="#!">Contactenos</a>
 						</li>
 					</ul>
-				</div>
-			</div>
-		</div>
+				</MDBCol>
+			</MDBRow>
+		</MDBContainer>
 		<div className="footer-copyright text-center py-3">
-			© 2019 Copyright:
-			<a href="https://mdbootstrap.com/education/bootstrap/"> BF Developers</a>
+			<MDBContainer fluid>
+				&copy; {new Date().getFullYear()} Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
+			</MDBContainer>
 		</div>
-	</footer>
+	</MDBFooter>
 );
