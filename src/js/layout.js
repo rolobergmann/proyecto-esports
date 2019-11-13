@@ -21,17 +21,19 @@ export const Layout = () => {
 		<div className="d-flex flex-column h-100">
 			<BrowserRouter>
 				<ScrollToTop>
-					<Navbar />
-					<div className="container-fluid">
-						<Switch>
-							<Route exact path="/" component={Home} />
-							<Route path="/demo" component={Demo} />
-							<Route path="/teams" component={Teams} />
-							<Route path="/single/:theid" component={Single} />
-							<Route render={() => <h1>Not found!</h1>} />
-						</Switch>
+					<div>
+						<Navbar />
+						<div className="container-fluid">
+							<Switch>
+								<Route exact path="/" component={Home} />
+								<Route path="/demo" component={Demo} />
+								<Route path="/teams" component={Teams} />
+								<Route path="/single/:theid" component={Single} />
+								<Route render={() => <h1>Not found!</h1>} />
+							</Switch>
+						</div>
+						<Footer />
 					</div>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
