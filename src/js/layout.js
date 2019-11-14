@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
+import { Players } from "./views/players";
 import { Teams } from "./views/teams";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
@@ -26,7 +26,7 @@ export const Layout = () => {
 						<div className="container-fluid">
 							<Switch>
 								<Route exact path="/" component={Home} />
-								<Route path="/demo" component={Demo} />
+								<Route path="/players" component={Players} />
 								<Route path="/teams" component={Teams} />
 								<Route path="/single/:theid" component={Single} />
 								<Route render={() => <h1>Not found!</h1>} />

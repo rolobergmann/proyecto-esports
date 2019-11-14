@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
 import {
 	MDBBtn,
@@ -46,7 +45,7 @@ export class Navbar extends Component {
 						</MDBNavItem>
 
 						<MDBNavItem>
-							<MDBNavLink to="/demo">
+							<MDBNavLink to="/players">
 								<a className="nav-link">Gamers</a>
 							</MDBNavLink>
 						</MDBNavItem>

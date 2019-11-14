@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBTabPane, MDBTabContent, MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
 
-export class TeamDetails extends Component {
+export class PlayerDetails extends Component {
 	state = {
 		items: {
 			default: "1"
