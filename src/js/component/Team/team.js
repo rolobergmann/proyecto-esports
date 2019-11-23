@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Nav from "react-bootstrap/Nav";
 import { MDBContainer, MDBRow, MDBCol, MDBTabPane, MDBTabContent, MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
 
 export class TeamDetails extends Component {
@@ -24,32 +25,32 @@ export class TeamDetails extends Component {
 			<MDBContainer className="mt-4">
 				<MDBRow>
 					<MDBCol md="12">
-						<MDBNav className="mt-5 nav-pills">
-							<MDBNavItem>
-								<MDBNavLink
+						<Nav justify variant="tabs">
+							<Nav.Item>
+								<Nav.Link
 									to="#"
 									active={this.state.items["default"] === "1"}
 									onClick={this.togglePills("default", "1")}>
 									Resumen
-								</MDBNavLink>
-							</MDBNavItem>
-							<MDBNavItem>
-								<MDBNavLink
+								</Nav.Link>
+							</Nav.Item>
+							<Nav.Item>
+								<Nav.Link
 									to="#"
 									active={this.state.items["default"] === "2"}
 									onClick={this.togglePills("default", "2")}>
 									Stats
-								</MDBNavLink>
-							</MDBNavItem>
-							<MDBNavItem>
-								<MDBNavLink
+								</Nav.Link>
+							</Nav.Item>
+							<Nav.Item>
+								<Nav.Link
 									to="#"
 									active={this.state.items["default"] === "3"}
 									onClick={this.togglePills("default", "3")}>
 									Bio
-								</MDBNavLink>
-							</MDBNavItem>
-						</MDBNav>
+								</Nav.Link>
+							</Nav.Item>
+						</Nav>
 						<MDBTabContent activeItem={this.state.items["default"]}>
 							<MDBTabPane tabId="1">
 								<p>
